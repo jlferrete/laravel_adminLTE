@@ -126,7 +126,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-danger elevation-4',
+    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -166,7 +166,7 @@ return [
     |
     */
 
-    'right_sidebar' => false,
+    'right_sidebar' => true,
     'right_sidebar_icon' => 'fas fa-cogs',
     'right_sidebar_theme' => 'dark',
     'right_sidebar_slide' => true,
@@ -232,27 +232,62 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
+            'text' => 'Link 1',
+            'url' => '#',
+            'topnav' => true
+        ],
+        [
+            'text' => 'Búsqueda',
             'search' => true,
             'topnav' => true,
         ],
+
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
         [
-            'text' => 'Dashboard',
-            'route' => 'home',
+            'text'      => 'Dashboard',
+            'route'     => 'home',
+            'icon'      => 'fas fa-fw fa-home',
+            'label'     => 'Nuevo',
+            'label_color' => 'danger',
+
         ],
         [
+            'text'      => 'Multilevel',
+            'submenu'   => [
+                [
+                    'text'      => 'Nivel 1',
+                    'submenu'   =>  [
+                        [
+                            'text' => 'Nivel 2',
+                            'url'  => '#'
+                        ],
+                        [
+                            'text' => 'Nivel 2',
+                            'url'  => '#'
+                        ],
+
+                    ]
+                ],
+                [
+                    'text' => 'Nivel 1',
+                    'url'  => '#'
+                ],
+
+            ]
+        ],
+        [
+
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'COFIGURACION DE CUENTA'],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
