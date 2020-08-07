@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Coders Free')
+@section('title', 'Dashboard')
 
 @section('content_header')
     <h1>Tablero</h1>
